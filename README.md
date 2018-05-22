@@ -1,4 +1,4 @@
-# CodingDojo
+# CodingDojo -full stack development
 
 1. Web Fundamentals 
 
