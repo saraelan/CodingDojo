@@ -1,6 +1,0 @@
-Javascript
-
-•	Basic Javascript Algorithm 
-•	Jaavascript Objects 
-•	DOM 
-•	PacMan Game development
