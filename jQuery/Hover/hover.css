@@ -1,0 +1,26 @@
+
+*{
+
+	background-color: black;
+}
+
+
+img{
+
+  	display: inline-block;
+  	height:350px;
+  	width:370px;
+	border: 2px solid silver;
+ 	border-radius: 5px;
+ 	margin:20px;
+  
+  
+}
+
+
+h1
+{
+	margin:auto;
+	text-align: center;
+	color:grey;
+}

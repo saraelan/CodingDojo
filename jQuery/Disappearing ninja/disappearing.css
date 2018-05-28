@@ -1,0 +1,36 @@
+.container
+{
+	
+	width: 100%;
+	margin:10px;
+	height:300px;
+}
+
+h2
+{
+	text-align: center;
+	text-decoration: underline;
+
+}
+
+button
+{
+	border-radius: 2px;
+	background-color:red;
+	border-radius: 5px;
+	height:30px;
+	width:100px;
+	text-align: center;
+	font-size: 15px;
+
+
+}
+
+
+img
+{	margin:10px;
+	height: 250px;
+	width:23%;
+	border-radius: 8px;
+
+}

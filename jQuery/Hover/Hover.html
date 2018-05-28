@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+	<title>Hover</title>
+	<link rel="stylesheet" type="text/css" href="hover.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('img').hover(
+				function(){
+					var srcs= $(this).attr('src');
+					var dest = $(this).attr('other');
+					$(this).attr('src',dest);
+					$(this).attr('other',srcs);
+				}
+			);
+		});
+</script>
+  
+</head>
+<body>
+	<h1>Hover</h1>
+    <img src="chi.jpg" alt="" other="set.jpg">
+ 	<img src="green.jpg" alt="" other="flower.jpg">
+ 	<img src="chi.jpg" alt="" other="set.jpg">
+ 	<img src="green.jpg" alt="" other="flower.jpg">
+
+
+ 
+    <img src="green.jpg" alt="" other="flower.jpg">
+ 	<img src="chi.jpg" alt="" other="set.jpg">
+ 	<img src="green.jpg" alt="" other="flower.jpg">
+ 	<img src="chi.jpg" alt="" other="set.jpg">
+
+</body>
+
+</html>
