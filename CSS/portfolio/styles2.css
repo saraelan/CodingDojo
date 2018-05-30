@@ -1,0 +1,184 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ font-family: "Helvetica", Arial, sans-serif;
+
+}
+
+#wrapper
+{
+	width:920px;
+}
+
+#head
+{
+
+ padding-top:1px;
+ padding-left:1px;
+  background-color: #f2f2f2;
+  width:901px;
+
+}
+
+
+
+
+#tags
+{
+
+
+ 
+display: inline-block;
+vertical-align: top;
+margin-left: 660px;
+margin-top:-30px;
+line-height: 30px;
+font-weight: bold;
+font-size: 11pt;
+
+
+}
+
+
+#body
+{
+
+background: #45323a;
+background: radial-gradient(#6f5964, #332127);
+padding: 10px;
+width:882px;
+
+}
+
+
+
+#heads
+{
+	width: 480px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+
+ 
+}
+
+#img
+{
+	height: 205px;
+    width: 360px;
+    border: 5px;
+    border-style: groove;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.heading{
+	color:white;
+    
+    background: #8d8b98;
+    background: linear-gradient(#b2b1b5, grey, #b2b1b5);
+    padding:5px;
+
+    
+   
+}
+
+.bodycontent
+{
+	height: 172px;
+    background-color: silver;
+    font-size:9pt ;
+    
+    text-align: justify;
+    padding:5px;
+}
+
+.secondbody
+{
+	width: 280px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+    margin: 5px;
+}
+
+.secondcontent
+
+{
+	
+    font-size: 9pt;
+    background-color: silver;
+    text-align: justify;
+}
+
+.secondmg
+{
+	width: 280px;
+    height:150px;
+    margin-bottom: 5px;
+}
+
+.seconds
+{
+	height: 250px;
+
+}
+
+.techo
+{
+	height: 180px;
+	padding: 1px;
+    padding-right: 2px;
+}
+
+.iconImg
+{
+	height: 40px;
+    width: 40px;
+    display: inline-block;
+	vertical-align: top;
+    margin:5px 0px 5px 8px;
+    
+}
+
+#button
+{
+	font-size: 8pt;
+    border: 1px solid black ;
+    padding :5px 3px;
+    display:block;
+    background-color: #407d61;
+    box-shadow: 2px 2px 2px #888888;
+    border-radius: 5px;
+    margin:auto;
+    height: 25px;
+    color:white;
+    font-weight: bold;
+
+}
+
+#footer 
+{
+    margin:10px;
+	text-align:center;
+    
+    font-family: 7pt;
+
+
+
+
+}
+
+.icon
+{  margin-top:10px;
+	width: 20px;
+    height: 20px;
+  vertical-align: bottom;
+}
+
+#footer a
+{
+	
+    font-style: italic;
+}
+
