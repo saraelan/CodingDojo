@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date validator</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+ 
+ $(document).ready(function ()
+  {
+            $("#fromdatepicker").datepicker();
+            $("#todatepicker").datepicker();
+               
+            $( "#inputs" ).submit(function(value) 
+            {
+                
+                if( $("#name").val().length < 2 )
+                {
+                    $( "#popup" )
+                    .slideDown().css( "display", "inline-block" );
+                }
+                else 
+                {
+                    $( "#popup" )
+                    .css( "display", "none" );
+                    alert("Thanks " + $("#name").val() + "! Your Cruise leaves on " + $("#fromdatepicker").val() + " and returns on " + $("#todatepicker").val() + "!")
+                }
+               
+
+            });
+        });
+
+ 
+
+
+  </script>
+  </head>
+  <body>
+
+<style>
+        *{
+           
+            margin: 0px;
+            padding: 0px;
+        }
+       
+        #container {
+          
+           background-color: silver;
+
+        }
+
+        #field {
+
+          padding: 10px;
+          height:30px;            
+        }
+
+
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+        }
+        #popup {
+
+            display: none;
+            font-size: 12px;     
+        }
+
+        #buttons 
+
+        {
+          margin-left: 110px;    
+
+        }
+
+
+  </style>
+
+
+  	<div id ="container">
+  	<h1>Welcome to the Coding Dojo plan a Cruise</h1>
+
+  	<form id="inputs" action="">
+
+    <div id ="field">
+  	<label for="from">From:</label>
+  	<input type="text" id="fromdatepicker">
+  	</div>
+
+    <div id ="field">
+  	<label for="To">To:</label>
+  	<input type="text" id="todatepicker">
+  	</div>
+
+    <div id ="field">
+  	<label for="name">Name:</label>
+    <input type="text" id="name">    
+    <p id="popup">Your name cannot be blank!</p>
+    </div>
+
+    <input id="buttons" class="buttons" type="submit" value="Check dates!">
+
+
+	</form>
+
+  	
+</div>
+
+</body>
+</html>
