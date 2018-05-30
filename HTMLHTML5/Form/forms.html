@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+			<meta charset="utf-8">
+			<title>My Form</title>
+			<meta name ="description" content="Test Form Registration "> 
+	</head>
+	<body>
+			<form action="test.php" method="post">
+			<p>My Registration Form</p>
+			<label for="first_name">First Name:</label>
+			<input type="text" id="first_name" name="first_name">
+			<br><br>
+
+			<label for="last_name">Last Name:</label>
+			<input type="text" id="last_name" name="last_name">
+			<br><br>
+
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email">
+			<br><br>
+
+			<label>Password:<input type="password" name="password"></label>
+			<br><br>
+
+			<label> PW Confirm:<input type="password" name="password_confirm"></label>
+			<br><br>
+
+			<!-- <label for="password">Password:</label>
+			<input type="password" id="passoword" name="password">
+			<br><br> -->
+
+			<!-- <label for ="password_confirm">PW Confirm</label>
+			<input type="password" id="passoword_confirm" name="passoword_confirmation">
+			<br><br> -->
+
+			<label for="date">Birthday:</label>
+			<input type="date" id="date" name="birthday">
+			<br><br>
+
+			<label for= "male">Male</label>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for= "female">Female</label>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for= "other">Other</label>
+			<input type="radio" id="other" name="gender" value="other">
+			<br><br>
+
+			<p>A short description about yourself:</p>
+			<textarea name="desciption"></textarea>
+			<br><br>
+
+			<p>Favourite Language</p>
+			<select name="Favouirte Language">
+					<option value="javascript">Javascript</option>
+					<option value="python">Python</option>
+					<option value="ruby">ruby</option></select>
+			</select>
+			<br><br>
+
+			<input type="hidden" name="id" value="30">
+			<input type="submit" value="Submit">	
+		</form>
+	</body>
+</html>
