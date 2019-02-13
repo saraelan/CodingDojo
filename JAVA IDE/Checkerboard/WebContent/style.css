@@ -1,0 +1,23 @@
+.container {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.evenrow .oddcol, .oddrow .evencol {
+	height: 40px;
+	width: 40px;
+	background-color: black;
+}
+
+.evenrow .evencol, .oddrow .oddcol {
+	height: 40px;
+	width: 40px;
+	background-color: red;
+}
+
+
+.evenrow, .oddrow {
+	display: flex;
+	justify-content: center;
+}
+
