@@ -1,0 +1,45 @@
+#main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.block{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+	color: white;
+}
+
+#guess{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input[value="Guess"]{
+	width: 50%;
+	margin-top: 5px;
+}
+
+.red{
+	background-color: red;
+}
+
+.green{
+	background-color: green;
+}
+
+#hidden{
+	display: none;
+}
+
+#show{
+	margin-top: 5px;
+}

@@ -1,0 +1,42 @@
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+	<div>
+    
+		<h3>My Ninja Gold: <%=gold%></h3>
+
+        <form action="/gold" method="post" class="place">
+		<h1>Farm</h1>
+		<h3>(earns 10-20 gold)</h3>
+		<input type="hidden" name="gold" value="farm">
+		<input type="submit" value="Find Gold!">
+		</form>
+
+		<form action="/gold" method="post" class="place">
+		<h1>Cave</h1>
+		<h3>(earns 5-10 gold)</h3>
+		<input type="hidden" name="gold" value="cave">
+		<input type="submit" value="Find Gold!">
+		</form>
+
+		<form action="/gold" method="post" class="place">
+		<h1>House</h1>
+		<h3>(earns 2-5 gold)</h3>
+		<input type="hidden" name="gold" value="house">
+		<input type="submit" value="Find Gold!">
+		</form>
+
+		<form action="/gold" method="post" class="place">
+		<h1>Casino!</h1>
+		<h3>(earns/takes 0-50 gold)</h3>
+		<input type="hidden" name="gold" value="casino">
+		<input type="submit" value="Find Gold!">
+		</form>
+
+
+            
+        
+        
+    </div>     
+</body>
+</html>

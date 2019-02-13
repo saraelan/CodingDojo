@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swapi</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+    $(document).ready(function(){
+        $('#peopleBtn').click(function(){
+            // let's make the request to our OWN server!
+            $.get('/people', function(data){
+                // log the data to be sure we have it before we dive into manipulating the DOM
+                console.log("got the data", data);
+            }, 'json');
+        });
+    });
+</script>
+<body>
+    <button id="peopleBtn">People</button>
+</body>
+</html>
