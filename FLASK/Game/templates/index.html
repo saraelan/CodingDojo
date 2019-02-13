@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Dojo Game/title>
+
+       
+        <link rel="stylesheet" href="{{ url_for( 'static', filename='css/survey.css') }}">
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+
+             <p>Wins:</p>
+             <p>Looses;</p>
+             <p>Ties:</p>
+
+
+
+            <h1>Rock Paper Scissors</h1>
+
+
+            <p>
+             <form action= "/process" method='post'>
+
+                <input class="btn btn-default" type="submit" name="rock_nmae" value="Rock">
+                <input class="btn btn-default" type="submit" name="paper_name" value="Paper">
+                <input class="btn btn-default" type="submit" name="scissors_name" value="Scissors">
+            </form>
+        </p>
+			   
+
+		</div>
+	</body>
+</html>
+

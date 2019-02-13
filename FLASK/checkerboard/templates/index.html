@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Flask Chckerboard</title>
+   	 <style>
+
+   	 body
+   	 {
+   	 	background-color: yellow;
+   	 }
+
+
+   	 #box1{
+   	 	height :70px;
+   	 	width:70px;
+   	 	background-color:red;
+     
+   	   	 }
+
+     #box2{
+
+      height :70px;
+      width:70px;
+      background-color:black;
+
+  
+     }
+
+
+
+   </style>
+  </head>
+   <body>   
+   <h1>Flask -Welcome Checkerboard</h1> 
+     <table>
+      {%for i in range(4):%}
+           <tr>
+                {%for i in range(4):%}
+                <td id='box1'></td>
+                <td id='box2'></td>
+                {% endfor %}
+            </tr>
+
+            <tr>
+                {%for i in range(4):%}
+                <td id='box1'></td>
+                <td id='box2'></td>
+                {% endfor %}
+            </tr>
+      {% endfor %}
+
+    </table>
+
+      <h1>Refractoring</h1>
+      <table>
+        {% for i in range(x):%}
+
+          <tr>
+
+             {% for j in range(y):%}
+             <td id='box{{ (i+j)%2+1 }}'></td>
+             {% endfor %}
+          </tr>
+
+
+        {% endfor %}
+
+      </table>
+
+
+        
+    </body>
+</html>
+
+

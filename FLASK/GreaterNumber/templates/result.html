@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Greater Number Game</title>
+
+
+     <style>
+       
+        form {
+              
+              display : inline-block;
+              margin-left: 760px;
+
+       }
+
+
+       h1 
+       {
+        text-align: center;
+       }
+
+       p
+       {
+        text-align: center;
+       }
+    
+</head>
+<body>
+    <div id='body'>
+        
+        <h1>Welcome to the Great Number Game </h1>
+         <p>I am thinking of a number between 1 to 100</p>
+         <p>  Take a guess!</p>
+
+
+        {% if value=='no' %}
+        <div id="fail">{{text}}</div>
+         <form action="/result" method="post">
+                <input type="text" name="text"/>
+             <br><br>
+                <input type="submit" value="Submit" name="Submit">
+            </form>
+        {%endif %}
+        {% if value=='yes' %}
+        <div id='success'>
+            {{massege}}
+            <form action="/">
+                <input type="submit" name="play" value="Play again">
+            </form>
+        </div>
+        {%endif %}
+
+
+    </div>
+</body>
+</html>

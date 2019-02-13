@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Counter Game</title>
+
+      
+       <style>
+       
+        form {
+    display : inline-block;
+    margin-left: 400px;
+
+       }
+
+
+       h1 
+       {
+        text-align: center;
+       }
+
+       p
+       {
+        text-align: center;
+       }
+
+
+    </style>
+
+    </head>
+
+    <body>
+
+        <h1>Counter</h1>
+         <p>{{session['count']}} times</p>
+
+        <form action="/destroy" method="post">
+                <input type="submit" value="Reset" name="Reset">
+            </form>
+
+
+         <form action="/add2" method="post">
+                <input type="submit" value="Add two" name="Add two">
+            </form>
+
+         <form action="/decrements" method="post">
+                <input type="submit" value="Decrement" name="Decrement">
+            </form>
+
+
+
+		
+	</body>
+</html>
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Flask Playground</title>
+   	 <style>
+
+   	 body
+   	 {
+   	 	background-color: black;
+   	 }
+
+
+   	 #box{
+   	 	height :250px;
+   	 	width:300px;
+   	 	/*background-color:red;*/
+   	 	display:inline-block;
+   	 	margin:5px;
+   	 	border-radius: 4px;
+   	 	box-shadow: 5px 10px;
+   	 	background-color:{{fitcolor}}
+   	 }
+
+   </style>
+  </head>
+   <body>   
+   <h1>Flask -Welcome Playground</h1> 
+      {% for i in range(times): %}
+        <div id = "box"></div>
+        {% endfor %}
+    </body>
+</html>

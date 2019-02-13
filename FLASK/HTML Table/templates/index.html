@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>HTML Table</title>
+   	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+   <body>   
+   <h1>Flask -HTML Table</h1> 
+       <table class="table table-striped">
+              
+           <tr>
+                 
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Full Name</td>
+                
+            </tr>
+       
+
+            {%for i in users %}
+            <tr> 
+            	
+                <td>{{ i['first_name'] }}</td>
+                <td>{{ i['last_name'] }}</td>
+                <td>{{ i['first_name'] }} {{i['last_name'] }} </td>
+                </tr>
+             {% endfor %}
+     
+
+    </table>
+    </body>
+</html>
+
+
+
+
+
+

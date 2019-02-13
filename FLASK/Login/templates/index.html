@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login and Registration</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+        *{
+        	margin:10px;
+        }
+    </style>
+</head>
+<body>
+
+	
+	<div><h1> Login and Registration</h1>
+
+
+
+		<h3> Register Here!!</h3>
+		{% with errors = get_flashed_messages(category_filter=["registrationerror"]) %}
+            {% if errors %}
+                <div id="errors">
+                {%- for message in errors %}
+                    <p>{{message}}</p>
+                {% endfor -%}
+                </div>
+            {% endif %}
+        {% endwith %}
+		<div>
+
+			<form id="regist" action="/registration" method="post">
+
+			<div class="form-group">
+		    <label for="exampleInputName2">First Name ;</label>
+		    <input type="text" class="form-control" id="exampleInputName2" name=first_name placeholder="Jane Doe">
+		  	</div>
+
+		  	<div class="form-group">
+		    <label for="exampleInputName2">Last Name :</label>
+		    <input type="text" class="form-control" id="exampleInputName2" name=last_name placeholder="Jane Doe">
+		  	</div>
+
+  			<div class="form-group">
+    		<label for="exampleInputEmail1">Email address :</label>
+    		<input type="email" class="form-control" id="exampleInputEmail1" name=email  placeholder="Email">
+  			</div>
+
+
+
+
+  			<div class="form-group">
+   		    <label for="exampleInputPassword1">Password :</label>
+   			 <input type="password" class="form-control" id="exampleInputPassword1" name=password  placeholder="Password">
+  			</div>
+
+
+
+  			<div class="form-group">
+   		    <label for="exampleInputPassword1">Password Confirmation :</label>
+   			 <input type="password" class="form-control" id="exampleInputPassword2" name=confirm_pwd placeholder="Password">
+  			</div>
+
+
+  			<div class ="button">
+  				<input class="btn btn-default btn btn-success" name=register type="submit" value="Register">
+  			</div>
+
+  			</form>
+
+  		</div>
+
+  			<br><br>
+
+  			<div>
+  				<h3>Login Here!</h3>
+
+  				{% with errors = get_flashed_messages(category_filter=["loginerror"]) %}
+            {% if errors %}
+                <div id="errors">
+                {%- for message in errors %}
+                    <p>{{message}}</p>
+                {% endfor -%}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+  				
+
+  					<div class="form-group">
+
+        <form id="login" action="/validate_login" method="post">
+    		<label for="exampleInputEmail1">Email address :</label>
+    		<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email">
+  			</div>
+
+
+
+
+  			<div class="form-group">
+   		    <label for="exampleInputPassword1">Password :</label>
+   			 <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+  			</div>
+
+  			<div class ="button">
+  				<input class="btn btn-default btn btn-success" type="submit" name="submit" value="Login">
+  			</div>
+
+
+  				</form>
+
+  			</div>
+  		</div>
+  	</body>
+  	</html>
+
+
+
+

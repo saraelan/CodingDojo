@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login and Registration</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+
+      <style>
+      *{
+        margin:20px;
+      }
+
+    </style>
+</head>
+<body>
+  <body>
+    <div class="success">
+      <h1>Registration Successful!!!</h1>
+      <br><br>
+      <div id="wrapper">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div id="success">
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+
+
+      <form id="logout" action="/back" method="post">
+      <input class="btn btn-default btn btn-success" type="submit" name="submit" value="Logout">
+    </div>
+  </body>
+</html> 
