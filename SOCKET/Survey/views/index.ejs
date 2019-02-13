@@ -1,0 +1,79 @@
+<html>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+        var socket = io.connect(); 
+        $('button').click(function()
+        {
+        // e.preventDefault();
+        console.log("I am in");
+            var form_data = {
+                        username : $('form').find('input[name="username"]').val(),
+                        dj : $('form').find('select[name="dj"]').val(),
+                        fl : $('form').find('select[name="fl"]').val(),
+                        comment : $('form').find('textarea[name="comment"]').val()
+                    };
+        socket.emit("posting_form",form_data);
+    });
+
+    socket.on('updated',function(data)
+    {
+         $('#submitted').html("<h3>Submitted data:</h3><ul><li>Name: " + data.username + "</li><li>Location: " + data.dj + "</li><li>Language: " + data.fl + "</li><li>Comment: " + data.comment + "</li></ul>");
+    });
+
+
+    socket.on('random_number', function(data) {
+    $('#lucky').html("<h1>Your lucky number is " + data + "!</h1>");
+    });
+ })
+       
+ </script>
+
+
+<body>
+
+    <div id ="lucky"></div>
+    <form action="/" method="post">
+	
+    <h2>Survey Form</h2>
+    
+		<h3>Please fill out the following survey:</h3>
+        
+            <label>Name:</label>
+                <input type="text" name="username"><br><br>
+
+            <label>Dojo Location:</label>
+                <select name="dj">
+                    <option value="DC">DC</option>
+                    <option value="Austin">Austin</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="San Francisco">San Francisco</option>
+                </select><br><br>
+
+            <label>Favorite Language:</label>
+                <select name="fl">
+                    <option value="JAVA">JAVA</option>
+                    <option value="Python">Python</option>
+                    <option value="MEAN">MEAN</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Ruby">Ruby</option>
+                </select><br><br>
+
+
+            <label>Comment:</label><br><br>
+                <textarea name="comment" id="" cols="30" rows="5"></textarea><br><br>
+
+            
+        </form>
+        
+       <button class="button">Submit</button>
+       <div id ="submitted"></div>
+
+
+    
+</body>
+</html>
