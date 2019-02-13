@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Quote Dashboard</title>
+	<body>
+	<div>
+    <h5>Here are Awesome Quotes</h3>
+        <table class="stripped">
+            <tr>
+                <td>Name</td>
+                <td>Quote</td>
+                <td>Time</td>
+            </tr>
+            <% for(let x in quotes){ %>
+            <tr>
+                <td><%= quotes[x].name %></td>
+                <td><%= quotes[x].quote %></td>
+                <td><%= quotes[x].createdAt %></td>
+            </tr>
+            <% } %>
+        </table>
+        <a href="/"><button>Back!!!</button>
+        </div>
+
+
+    </body>  
+</html>

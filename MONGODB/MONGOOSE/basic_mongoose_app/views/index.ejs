@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Basic Mongoose App</title>
+</head>
+    <body>
+        <div>
+        <h3>Basic Mongoose App</h3>
+        <form action="/users" method="post">
+            <label>Name</label><br>
+            <input type="text" name="name"><br>
+            <label>Age</label><br>
+            <input type="text" name="age"><br>
+            <input type="submit" value="Submit!"><br>
+        </form>
+
+
+        <h3>Users:</h3>
+        <table class="stripped">
+            <tr>
+                <td>Name:</td>
+                <td>Age:</td>
+            </tr>
+            <% for(let x in users){ %>
+            <tr>
+                <td><%= users[x].name %></td>
+                <td><%= users[x].age %></td>
+            </tr>
+            <% } %>
+        </table>
+        <div>
+    </body>  
+</html>
+
